@@ -19,8 +19,8 @@
 		"workbench.colorTheme": "Atom One Dark",
 		"workbench.iconTheme": "material-icon-theme",
 		"workbench.colorCustomizations": {
-			"titleBar.activeBackground": "#02ce50",
-			"titleBar.inactiveBackground": "#019208"
+			"titleBar.activeBackground": "#019208",
+			"titleBar.inactiveBackground": "#015705"
 		},
 		"npm.packageManager": "yarn",
 		"eslint.workingDirectories": [

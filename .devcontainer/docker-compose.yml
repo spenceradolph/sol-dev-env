@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+    solana-dev-box:
+        container_name: solana-dev-box
+        build:
+            context: ../
+            dockerfile: .devcontainer/Dockerfile.solana-dev-box
+        volumes:
+            - ../:/solana
+        command: /bin/sh -c "while sleep 1000; do :; done"

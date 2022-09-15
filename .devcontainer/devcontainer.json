@@ -1,0 +1,36 @@
+{
+	"name": "Solana-Dev",
+	"dockerComposeFile": ["./docker-compose.yml"],
+	"service": "solana-dev-box",
+	"workspaceFolder": "/solana",
+	"remoteUser": "root",
+	"shutdownAction": "stopCompose",
+	"extensions": [
+		"esbenp.prettier-vscode",
+		"dbaeumer.vscode-eslint",
+		"oderwat.indent-rainbow",
+		"2gua.rainbow-brackets",
+		"mikestead.dotenv",
+		"arcanis.vscode-zipfs",
+		"akamud.vscode-theme-onedark",
+		"PKief.material-icon-theme"
+	],
+	"settings": {
+		"workbench.colorTheme": "Atom One Dark",
+		"workbench.iconTheme": "material-icon-theme",
+		"workbench.colorCustomizations": {
+			"titleBar.activeBackground": "#02ce50",
+			"titleBar.inactiveBackground": "#019208"
+		},
+		"npm.packageManager": "yarn",
+		"eslint.workingDirectories": [
+			{
+				"pattern": "./apps/*/"
+			},
+			{
+				"pattern": "./packages/*/"
+			}
+		]
+	},
+	"postCreateCommand": "yarn install"
+}

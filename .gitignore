@@ -7,3 +7,10 @@
 !.yarn/versions
 
 node_modules
+
+# Rust things
+target/
+debug/
+Cargo.lock
+
+dist

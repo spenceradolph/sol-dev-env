@@ -7,7 +7,6 @@
 		"contracts/*",
 		"packages/*"
 	],
-	"scripts": {},
 	"prettier": {
 		"tabWidth": 4,
 		"semi": true,

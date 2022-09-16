@@ -8,4 +8,9 @@ ENV PATH="/root/.local/share/solana/install/active_release/bin:$PATH"
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 RUN echo 'source $HOME/.cargo/env' >> $HOME/.bashrc
 
+# Anchor
+RUN cargo install --git https://github.com/project-serum/anchor avm --locked --force
+RUN avm install latest
+RUN avm use latest
+
 WORKDIR /solana

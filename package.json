@@ -1,5 +1,5 @@
 {
-	"name": "sol-dev-env",
+	"name": "soldev",
 	"version": "1.0.0",
 	"private": true,
 	"workspaces": [

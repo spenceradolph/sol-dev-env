@@ -1,0 +1,8 @@
+{
+	"name": "@soldev/helloworld",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"build": "cargo build-bpf --manifest-path=Cargo.toml --bpf-out-dir=../../dist/solana/helloworld"
+	}
+}

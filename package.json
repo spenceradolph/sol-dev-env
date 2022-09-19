@@ -7,9 +7,6 @@
 		"contracts/*",
 		"packages/*"
 	],
-	"scripts": {
-		"contract:build:helloworld": "cargo build-bpf --manifest-path=contracts/helloworld/Cargo.toml --bpf-out-dir=dist/solana/helloworld"
-	},
 	"prettier": {
 		"tabWidth": 4,
 		"semi": true,
@@ -17,5 +14,5 @@
 		"useTabs": true,
 		"printWidth": 200
 	},
-	"packageManager": "yarn@4.0.0-rc.18"
+	"packageManager": "yarn@4.0.0-rc.20"
 }

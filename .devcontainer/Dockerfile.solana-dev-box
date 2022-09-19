@@ -13,4 +13,7 @@ RUN cargo install --git https://github.com/project-serum/anchor avm --locked --f
 RUN avm install latest
 RUN avm use latest
 
+EXPOSE 3000
+EXPOSE 49153
+
 WORKDIR /solana

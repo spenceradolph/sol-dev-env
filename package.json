@@ -14,5 +14,8 @@
 		"useTabs": true,
 		"printWidth": 200
 	},
-	"packageManager": "yarn@4.0.0-rc.20"
+	"packageManager": "yarn@4.0.0-rc.20",
+	"engines": {
+		"node": "16.17.0"
+	}
 }

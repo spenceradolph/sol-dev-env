@@ -1,17 +1,32 @@
-FROM node:18
+FROM rust:latest
+
+# nodejs
+ENV NODE_VERSION=16.17.0
+RUN apt install -y curl
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+ENV NVM_DIR=/root/.nvm
+RUN . "$NVM_DIR/nvm.sh" && nvm install ${NODE_VERSION}
+RUN . "$NVM_DIR/nvm.sh" && nvm use v${NODE_VERSION}
+RUN . "$NVM_DIR/nvm.sh" && nvm alias default v${NODE_VERSION}
+ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
+RUN node --version
+RUN npm --version
 
 # Solana CLI
 RUN sh -c "$(curl -sSfL https://release.solana.com/v1.14.1/install)"
 ENV PATH="/root/.local/share/solana/install/active_release/bin:$PATH"
 
 # Rust
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-RUN echo 'source $HOME/.cargo/env' >> $HOME/.bashrc
+# RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+# RUN echo 'source $HOME/.cargo/env' >> $HOME/.bashrc
 
 # Anchor
 RUN cargo install --git https://github.com/project-serum/anchor avm --locked --force
 RUN avm install latest
 RUN avm use latest
+
+# Yarn
+RUN npm install --global yarn
 
 EXPOSE 3000
 EXPOSE 49153

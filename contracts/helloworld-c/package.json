@@ -1,0 +1,7 @@
+{
+	"name": "@soldev/helloworld_c",
+	"scripts": {
+		"build": "V=1 make -C ./ helloworld_c",
+		"deploy": "solana program deploy ./dist/helloworld_c.so"
+	}
+}

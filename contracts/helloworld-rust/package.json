@@ -1,7 +1,7 @@
 {
-	"name": "@soldev/hello-world-rust",
+	"name": "@soldev/helloworld_rust",
 	"scripts": {
 		"build": "cargo build-bpf --manifest-path=./Cargo.toml --bpf-out-dir=./dist",
-		"deploy": "solana program deploy ./dist/helloworld.so"
+		"deploy": "solana program deploy ./dist/helloworld_rust.so"
 	}
 }

@@ -1,7 +1,0 @@
-{
-	"name": "@soldev/hello-world-c",
-	"scripts": {
-		"build": "V=1 make -C ./ helloworld",
-		"deploy": ""
-	}
-}

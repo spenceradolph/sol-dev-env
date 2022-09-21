@@ -7,6 +7,10 @@
 		"contracts/*",
 		"packages/*"
 	],
+	"scripts": {
+		"solana:balance": "solana balance",
+		"solana:airdrop1": "solana airdrop 1"
+	},
 	"prettier": {
 		"tabWidth": 4,
 		"semi": true,
